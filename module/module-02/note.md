@@ -88,3 +88,80 @@
   - Private Layer: EC2, Database, dịch vụ backend.  
 
 ---
+## Module 02-02 - VPC Security and Multi-VPC Features
+
+### 1. Security Group (SG)
+- **Firewall ảo stateful** (có lưu trạng thái).
+- Kiểm soát lưu lượng **inbound** (đến) và **outbound** (đi) của tài nguyên AWS.
+- Rule giới hạn theo: **protocol, source, port, hoặc SG khác**.
+- Chỉ hỗ trợ **allow rule** (không có deny).
+- Áp dụng trực tiếp lên **Elastic Network Interface**.
+- Mặc định:
+  - Chặn tất cả **inbound**.
+  - Cho phép tất cả **outbound**.
+
+---
+
+### 2. Network Access Control List (NACL)
+- **Firewall ảo stateless** (không lưu trạng thái).
+- Kiểm soát inbound và outbound ở mức **Subnet**.
+- Rule giới hạn theo: **protocol, source, port**.
+- Áp dụng trên **VPC Subnet**.
+- Mặc định:
+  - Cho phép tất cả inbound và outbound.
+- Rule được đọc **từ trên xuống dưới**, match rule nào thì áp dụng rule đó.
+- Hỗ trợ cả **allow** và **deny**.
+
+---
+
+### 3. VPC Flow Logs
+- Cho phép **ghi lại metadata** của traffic đến/đi từ các ENI trong VPC.
+- Export log sang **CloudWatch Logs** hoặc **S3**.
+- Không ghi nội dung gói tin, chỉ log header (IP nguồn, IP đích, port, action).
+
+---
+
+### 4. VPC Peering
+- Kết nối trực tiếp **2 VPC** để tài nguyên có thể liên lạc mà không qua Internet.
+- **Tăng bảo mật**: traffic đi trong nội bộ AWS.
+- Đặc điểm:
+  - **Kết nối 1:1** (không có transitive routing).
+  - Không hỗ trợ nếu 2 VPC bị **overlap CIDR**.
+- Ứng dụng: kết nối VPC Dev ↔ VPC Analytics.
+
+### Sơ đồ VPC Peering
+![VPC Peering](image-1.png)
+
+- **VPC 10.10.0.0/16** ↔ **VPC 10.11.0.0/16** qua Peering Connection.  
+- Route Table:
+  - VPC A: `10.11.0.0/16 → Peering Connection`
+  - VPC B: `10.10.0.0/16 → Peering Connection`
+- EC2 ở VPC A ↔ EC2 ở VPC B có thể giao tiếp trực tiếp.
+
+---
+
+### 5. Transit Gateway (TGW)
+- **Hub trung tâm** để kết nối nhiều VPC và mạng On-premises.
+- Giúp **đơn giản hóa mạng** và loại bỏ cấu hình peering phức tạp.
+- **Transit Gateway Attachment (TGA)**: liên kết một Subnet trong AZ với TGW.
+- Khi một subnet trong AZ kết nối TGW, các subnet khác cùng AZ cũng có thể sử dụng TGW.
+
+### Sơ đồ Transit Gateway
+![Transit Gateway](image-2.png)
+
+- **Production VPC (10.10.0.0/16)**  
+- **Staging VPC (10.11.0.0/16)**  
+- **Dev VPC (10.12.0.0/16)**  
+- **Test VPC (10.13.0.0/16)**  
+
+→ Tất cả gắn vào **Transit Gateway**.  
+
+- Route Table của TGW:
+  - `10.10.0.0/16 → Attachment-1`
+  - `10.11.0.0/16 → Attachment-2`
+  - `10.12.0.0/16 → Attachment-3`
+  - `10.13.0.0/16 → Attachment-4`
+
+Các VPC có thể liên lạc chéo qua TGW (**hỗ trợ transitive routing**).
+
+---
