@@ -165,3 +165,75 @@
 Các VPC có thể liên lạc chéo qua TGW (**hỗ trợ transitive routing**).
 
 ---
+
+# Module 02-03 - VPN - Direct Connect - Load Balancer - Extra Resources
+
+## 1. VPN
+- **VPN Site-to-Site**: dùng trong mô hình **Hybrid Cloud**, thiết lập kết nối giữa Data Center truyền thống ↔ AWS VPC.  
+  - **Virtual Private Gateway (VGW)**: đầu AWS (được quản lý bởi AWS, có 2 endpoint ở 2 AZ).  
+  - **Customer Gateway (CGW)**: đầu khách hàng (có thể là thiết bị phần cứng hoặc software appliance).  
+
+- **VPC Client-to-Site**: cho phép một host từ xa truy cập trực tiếp vào tài nguyên trong VPC.  
+  > Khuyến khích dùng VPN Client-to-Site từ AWS Marketplace.
+
+---
+
+## 2. AWS Direct Connect
+- Dịch vụ tạo kết nối **dedicated** từ Data Center tới AWS.  
+- **Độ trễ thấp**: ~20ms - 30ms.  
+- Ở Việt Nam: dùng qua **AWS Direct Connect Partners** (Hosted Connections).  
+- Nếu kết nối trực tiếp tới AWS thì gọi là **Dedicated Connections**.  
+- **Băng thông linh hoạt**: có thể nâng/giảm theo nhu cầu.
+
+---
+
+## 3. Elastic Load Balancing (ELB)
+- Dịch vụ **Load Balancer managed** bởi AWS.  
+- Phân phối lưu lượng đến nhiều **EC2 / Container / Lambda**.  
+- Hỗ trợ các giao thức: **HTTP, HTTPS, TCP, TLS (SSL)**.  
+- Có thể đặt trong **Public Subnet** hoặc **Private Subnet**.  
+- Mỗi ELB được cấp **DNS name** (chỉ NLB hỗ trợ gán IP tĩnh).  
+- **Health Check**: chỉ forward traffic tới instance khỏe.  
+- **Access Logs**: lưu log truy cập về **S3** để phân tích.  
+- **Sticky Session** (session affinity): giữ session của một user vào đúng 1 target (áp dụng cho ALB, NLB, CLB).  
+
+### Các loại Load Balancer
+1. **Application Load Balancer (ALB)**  
+   - Hoạt động **Layer 7**.  
+   - Giao thức: **HTTP, HTTPS**.  
+   - Hỗ trợ **path-based routing, host-based routing**.  
+   - Target đa dạng: **EC2, Lambda, Container, IP ngoài VPC**.  
+   - Ví dụ: `/mobile` → Target Group A, `/desktop` → Target Group B.  
+
+   ![ALB kiến trúc](image-3.png)
+  - **Load Balancer** nhận request.  
+  - **Listener**: rule định nghĩa cách xử lý traffic (port, protocol).  
+  - **Target Group**: tập hợp target (EC2, Lambda, Container, IP).  
+  - **Health Check**: kiểm tra tình trạng target.  
+  - Rule → Listener → Target Group → Target.  
+
+2. **Network Load Balancer (NLB)**  
+   - Hoạt động **Layer 4**.  
+   - Giao thức: **TCP, TLS**.  
+   - **Hiệu năng cao nhất**, xử lý **hàng triệu request/s**.  
+   - Hỗ trợ **IP tĩnh**.  
+   - Route traffic tới: **EC2, Container, IP ngoài VPC**.
+
+3. **Classic Load Balancer (CLB)**  
+   - Hỗ trợ cả **Layer 4 và 7**.  
+   - Giao thức: **HTTP, HTTPS, TCP, TLS**.  
+   - Ít tính năng, **chi phí cao hơn**, AWS khuyến khích dùng ALB/NLB thay thế.  
+   - Route traffic tới **EC2**.  
+
+4. **Gateway Load Balancer (GWLB)**  
+   - Hoạt động **Layer 3**, forward toàn bộ IP packet.  
+   - Sử dụng **GENEVE protocol** trên port **6081**.  
+   - Dùng để route traffic qua **virtual appliances** (firewall, IDS/IPS, security appliance).  
+
+   ![Mô hình GWLB](image-4.png)
+  - Traffic từ Internet đi vào **IGW**.  
+  - Qua **Gateway Load Balancer Endpoint** → **Gateway Load Balancer**.  
+  - Forward tới **Security Appliances** (Firewall, IDS/IPS).  
+  - Sau đó quay lại **Application Servers**.  
+  - Đảm bảo traffic luôn được kiểm tra bảo mật trước khi đến ứng dụng.  
+
