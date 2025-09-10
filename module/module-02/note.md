@@ -55,7 +55,7 @@
 
 ## Giải thích sơ đồ mô hình
 
-![VPC Diagram](image.png.png)
+![VPC Diagram](image.png)
 
 - **Region**: Singapore (ap-southeast-1).  
 - **VPC CIDR**: `10.10.0.0/16`.  
@@ -88,6 +88,3 @@
   - Private Layer: EC2, Database, dịch vụ backend.  
 
 ---
-
-
-![alt text](image.png)
