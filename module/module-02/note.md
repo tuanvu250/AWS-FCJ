@@ -14,11 +14,11 @@
 - Mỗi **Subnet chỉ thuộc một Availability Zone**.  
 - CIDR Subnet là tập con của CIDR VPC.  
 - AWS giữ lại **5 địa chỉ IP** trong mỗi Subnet:  
-  - `.0` → Network address  
-  - `.255` → Broadcast  
-  - `.1` → Router  
-  - `.2` → DNS  
-  - `.3` → Reserved cho tính năng tương lai  
+  - `10.10.1.0` → Network address  
+  - `10.10.1.255` → Broadcast  
+  - `10.10.1.1` → Router  
+  - `10.10.1.2` → DNS  
+  - `10.10.1.3` → Reserved cho tính năng tương lai  
 
 ### Route Table (Bảng định tuyến)
 - Tập hợp các **Route** để xác định đường đi cho mạng.  
