@@ -55,7 +55,7 @@
 
 ## Giải thích sơ đồ mô hình
 
-![VPC Diagram](image.png)
+![VPC Diagram](image/image.png)
 
 - **Region**: Singapore (ap-southeast-1).  
 - **VPC CIDR**: `10.10.0.0/16`.  
@@ -130,7 +130,7 @@
 - Ứng dụng: kết nối VPC Dev ↔ VPC Analytics.
 
 ### Sơ đồ VPC Peering
-![VPC Peering](image-1.png)
+![VPC Peering](image/image-1.png)
 
 - **VPC 10.10.0.0/16** ↔ **VPC 10.11.0.0/16** qua Peering Connection.  
 - Route Table:
@@ -147,7 +147,7 @@
 - Khi một subnet trong AZ kết nối TGW, các subnet khác cùng AZ cũng có thể sử dụng TGW.
 
 ### Sơ đồ Transit Gateway
-![Transit Gateway](image-2.png)
+![Transit Gateway](image/image-2.png)
 
 - **Production VPC (10.10.0.0/16)**  
 - **Staging VPC (10.11.0.0/16)**  
@@ -205,7 +205,7 @@ Các VPC có thể liên lạc chéo qua TGW (**hỗ trợ transitive routing**)
    - Target đa dạng: **EC2, Lambda, Container, IP ngoài VPC**.  
    - Ví dụ: `/mobile` → Target Group A, `/desktop` → Target Group B.  
 
-   ![ALB kiến trúc](image-3.png)
+  ![ALB kiến trúc](image/image-3.png)
   - **Load Balancer** nhận request.  
   - **Listener**: rule định nghĩa cách xử lý traffic (port, protocol).  
   - **Target Group**: tập hợp target (EC2, Lambda, Container, IP).  
@@ -230,7 +230,7 @@ Các VPC có thể liên lạc chéo qua TGW (**hỗ trợ transitive routing**)
    - Sử dụng **GENEVE protocol** trên port **6081**.  
    - Dùng để route traffic qua **virtual appliances** (firewall, IDS/IPS, security appliance).  
 
-   ![Mô hình GWLB](image-4.png)
+  ![Mô hình GWLB](image/image-4.png)
   - Traffic từ Internet đi vào **IGW**.  
   - Qua **Gateway Load Balancer Endpoint** → **Gateway Load Balancer**.  
   - Forward tới **Security Appliances** (Firewall, IDS/IPS).  
