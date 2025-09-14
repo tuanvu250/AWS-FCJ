@@ -1,7 +1,9 @@
+---
 title: "Báo cáo thực tập"
 date: "2025-09-09"
 weight: 1
 chapter: false
+---
 
 # Báo cáo thực tập
 

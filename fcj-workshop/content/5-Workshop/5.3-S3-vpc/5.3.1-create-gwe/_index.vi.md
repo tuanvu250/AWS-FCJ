@@ -1,8 +1,10 @@
+---
 title : "Tạo một Gateway Endpoint"
 date : "2025-09-09"
 weight : 1
 chapter : false
 pre : " <b> 5.3.1 </b> "
+---
 
 1. Mở [Amazon VPC console](https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#Home:)
 2. Trong thanh điều hướng, chọn **Endpoints**, click **Create Endpoint**:

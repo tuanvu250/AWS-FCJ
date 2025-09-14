@@ -1,8 +1,10 @@
+---
 title : "Mô phỏng On-premises DNS "
 date : "2025-09-09"
 weight : 4
 chapter : false
 pre : " <b> 5.4.4 </b> "
+---
 
 AWS PrivateLink endpoint có một địa chỉ IP cố định trong từng AZ nơi chúng được triển khai, trong suốt thời gian tồn tại của endpoint (cho đến khi endpoint bị xóa). Các địa chỉ IP này được gắn vào Elastic network interface (ENI). AWS khuyến nghị sử dụng DNS để resolve địa chỉ IP cho endpoint để các ứng dụng downstream sử dụng địa chỉ IP mới nhất khi ENIs được thêm vào AZ mới hoặc bị xóa theo thời gian.
 

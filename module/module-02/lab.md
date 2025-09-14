@@ -1,21 +1,36 @@
 # AWS Labs
 
-## Lab 01: Quản lý Tài khoản Cơ bản
-- Tạo tài khoản AWS  
-- Thiết lập **MFA (Multi-Factor Authentication)**  
-- Tạo tài khoản và nhóm **Admin**  
-- Hỗ trợ xác thực tài khoản  
+## Lab 03: Khởi tạo VPC
+- Giới thiệu Amazon VPC 
+- Tường lửa trong VPC 
+- Thực hành tạo 1 VPC 
+- Cấu hình Site to Site VPN  
 
-## Lab 07: Quản lý Ngân sách (Budgets)
-- Tạo **Cost Budget**  
-- Tạo **Usage Budget**  
-- Tạo **Reservation Budget**  
-- Tạo **Saving Plans Budget**  
+## Lab 10: System Manager - Session Manager
+- Các bước chuẩn bị  
+- Tạo kết nối đến máy chủ EC2 
+- Quản lý session logs 
+- Port Forwarding 
 
-## Lab 09: Hỗ trợ & Support
-- Các gói hỗ trợ của AWS  
-- Truy cập **AWS Support**  
-- Quản lý yêu cầu hỗ trợ (Support Case Management)  
+## Lab 19: Thiết lập VPC Peering
+- Các bước chuẩn bị  
+- Cập nhật Network ACL
+- Tạo kết nối Peering
+- Cấu hình Route tables
+- Kích hạot Cross-Peer DNS
+
+## Lab 20: Thiết lập Transit Gateway
+- Thiết lập hạ tầng
+- Tạo transit Gateway
+- Transit Gateway Attachments
+- Tạo Route Table cho TGW
+- Thêm Gateway vào Route Tables & Kiểm tra kết quả
+
+## Lab 0x: Hybrid DNS
+- Thiết lập Hybrid DNS
+- Tạo Outbound Endpoint
+- Tạo Route 53 Resolver Rule
+- Tạo Inbound Endpoint
 
 ---
 

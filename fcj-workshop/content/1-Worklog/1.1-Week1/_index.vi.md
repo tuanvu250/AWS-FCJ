@@ -1,56 +1,39 @@
+---
 title: "Worklog Tuần 1"
 date: "2025-09-09"
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
+---
 ### Mục tiêu tuần 1:
 
-- Kết nối, làm quen với các thành viên trong First Cloud Journey.
-- Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Làm quen thành viên FCJ, nắm nội quy và quy trình làm việc.
+- Chuẩn bị môi trường làm workshop: VS Code, Hugo, Git, AWS CLI, SSH.
+- Thiết lập tài khoản và bảo mật cơ bản: bật MFA, tạo Admin Group/User, cấu hình Console và Support cases.
+- Nắm vững nền tảng Networking trên AWS: VPC, Subnet, Route Table, IGW, NAT GW, Security Group, NACL, Route 53.
+- Thực hành Compute & kết nối: tạo EC2, kết nối SSH, lab Site‑to‑Site VPN.
+- Thiết lập Hybrid DNS với Route 53 Resolver (AD, forwarders, resolver rules) cho tra cứu hai chiều.
+- Thiết lập kết nối liên VPC: VPC Peering và AWS Transit Gateway; kiểm thử routing end‑to‑end.
 
 ### Các công việc cần triển khai trong tuần này:
 
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP <br>                    | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 1 | - Làm quen thành viên FCJ <br> - Đọc và lưu ý nội quy/quy định <br> - Chuẩn bị công cụ làm workshop (VS Code, Hugo, ...) <br> - Giới thiệu về AWS & các khái niệm cơ bản | 08/09/2025 | 08/09/2025 | <https://van-hoang-kha.github.io/vi/> |
+| 2 | - Tạo mới tài khoản AWS <br> - Kích hoạt MFA cho Tài khoản AWS <br> - Tạo Admin Group và Admin User <br> - Hỗ trợ Xác thực Tài khoản <br> - Khám phá và cấu hình AWS Management Console <br> - Tạo và Quản Lý Các Trường Hợp Hỗ Trợ trong AWS | 09/09/2025 | 09/09/2025 | <https://000001.awsstudygroup.com/vi/> |
+| 3 | - Các dịch vụ mạng trên AWS: <br>&emsp; + VPC, Subnet, Route Table <br>&emsp; + Internet Gateway, NAT Gateway <br>&emsp; + Security Group & NACL <br>&emsp; + VPC Peering, Transit Gateway (khái niệm) <br>&emsp; + Elastic Load Balancing, Route 53 (DNS)| 10/09/2025 | 10/09/2025 | <https://github.com/tuanvu250/AWS-FCJ/blob/main/module/module-02/note.md> |
+| 4 | - Thực hành EC2: <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Cấu hình Site to Site VPN | 11/09/2025 | 11/09/2025 | <https://000003.awsstudygroup.com/> |
+| 5 | - Thiết lập Hybrid DNS với Route 53 Resolver: <br>&emsp; + Kết nối đến RDGW <br>&emsp; + Triển khai Microsoft AD <br>&emsp; + Thiết lập DNS | 12/09/2025 | 12/09/2025 | <https://000010.awsstudygroup.com/> |
+| 6 | - Thiết lập VPC Peering <br>&emsp; + Tạo kết nối Peering giữa VPCs <br>&emsp; + Cập nhật Route tables và kiểm thử kết nối | 13/09/2025 | 13/09/2025 | <https://000019.awsstudygroup.com/> |
+| 7 | - Thực hành AWS Transit Gateway: <br>&emsp; + Tạo Transit Gateway <br>&emsp; + Tạo Transit Gateway Attachments <br>&emsp; + Tạo Transit Gateway Route Tables <br>&emsp; + Thêm Transit Gateway Routes vào VPC Route Tables | 14/09/2025 | 14/09/2025 | <https://000020.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 1:
 
-- Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản:
-
-  - Compute
-  - Storage
-  - Networking
-  - Database
-  - ...
-
-- Đã tạo và cấu hình AWS Free Tier account thành công.
-
-- Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-- Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-
-  - Access Key
-  - Secret Key
-  - Region mặc định
-  - ...
-
-- Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  - Kiểm tra thông tin tài khoản & cấu hình
-  - Lấy danh sách region
-  - Xem dịch vụ EC2
-  - Tạo và quản lý key pair
-  - Kiểm tra thông tin dịch vụ đang chạy
-  - ...
-
-- Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-- ...
+- Chuẩn bị môi trường làm việc; nắm các khái niệm AWS cơ bản (account, region, AZ, nhóm dịch vụ).
+- Thiết lập tài khoản và bảo mật: tạo AWS account, bật MFA, tạo Admin Group/User, xác thực tài khoản, cấu hình Console và quản lý Support cases.
+- Kiến thức Networking nền tảng trên AWS: VPC, Subnet, Route Table, Internet Gateway, NAT Gateway, Security Group, NACL, Elastic Load Balancing, Route 53; khái niệm về Peering, VPN, Transit Gateway.
+- Thực hành Compute & kết nối: triển khai EC2 instance, kết nối SSH, cấu hình Site‑to‑Site VPN ở mức lab.
+- Thiết lập Hybrid DNS với Route 53 Resolver: kết nối RDGW, triển khai Microsoft AD, cấu hình DNS/forwarders và Resolver rules cho tra cứu hai chiều.
+- Thiết lập VPC Peering giữa các VPC, cập nhật Route Tables và kiểm thử liên thông mạng thành công.
+- Thực hành AWS Transit Gateway: tạo TGW, cấu hình Attachments và Route Tables, cập nhật routes vào VPC Route Tables để trung chuyển lưu lượng.
+- Hoàn thiện worklog tuần 1 và rà soát/dọn dẹp các tài nguyên không còn sử dụng.

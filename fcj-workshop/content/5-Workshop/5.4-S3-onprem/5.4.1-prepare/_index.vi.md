@@ -1,8 +1,10 @@
+---
 title : "Chuẩn bị tài nguyên"
 date : "2025-09-09"
 weight : 1
 chapter : false
 pre : " <b> 5.4.1 </b> "
+---
 
 Để chuẩn bị cho phần này của workshop, bạn sẽ cần phải:
 

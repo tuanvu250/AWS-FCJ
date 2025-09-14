@@ -6,54 +6,38 @@ chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
+
 
 ### Week 1 Objectives:
 
-- Connect and get acquainted with members of First Cloud Journey.
-- Understand basic AWS services, how to use the console & CLI.
+- Get acquainted with FCJ members; understand internal rules and working procedures.
+- Prepare the workshop environment: VS Code, Hugo, Git, AWS CLI, SSH.
+- Set up the AWS account and baseline security: enable MFA, create Admin Group/User, configure Console and Support cases.
+- Master core AWS Networking fundamentals: VPC, Subnet, Route Table, IGW, NAT GW, Security Group, NACL, Route 53.
+- Practice compute and connectivity: launch EC2, SSH access, Site-to-Site VPN (lab).
+- Set up Hybrid DNS with Route 53 Resolver (Microsoft AD, forwarders, resolver rules) for bidirectional name resolution.
+- Establish inter‑VPC connectivity: VPC Peering and AWS Transit Gateway; validate end‑to‑end routing.
+- Keep a worklog, summarize learnings, and clean up resources after labs.
 
 ### Tasks to be carried out this week:
 
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP <br>                              | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | - Get acquainted with FCJ members <br> - Read and note internal rules and procedures <br> - Prepare workshop tools (VS Code, Hugo, ...) <br> - Intro to AWS & core concepts | 08/09/2025 | 08/09/2025 | <https://van-hoang-kha.github.io/vi/> |
+| 2 | - Create a new AWS account <br> - Enable MFA for the AWS account <br> - Create Admin Group and Admin User <br> - Support account verification <br> - Explore and configure AWS Management Console <br> - Create and manage AWS Support cases | 09/09/2025 | 09/09/2025 | <https://000001.awsstudygroup.com/vi/> |
+| 3 | - AWS Networking services: <br>&emsp; + VPC, Subnet, Route Table <br>&emsp; + Internet Gateway, NAT Gateway <br>&emsp; + Security Group & NACL <br>&emsp; + VPC Peering, Transit Gateway (concepts) <br>&emsp; + Elastic Load Balancing, Route 53 (DNS) | 10/09/2025 | 10/09/2025 | <https://github.com/tuanvu250/AWS-FCJ/blob/main/module/module-02/note.md> |
+| 4 | - EC2 practice: <br>&emsp; + Launch EC2 instance <br>&emsp; + SSH access <br>&emsp; + Configure Site‑to‑Site VPN | 11/09/2025 | 11/09/2025 | <https://000003.awsstudygroup.com/> |
+| 5 | - Set up Hybrid DNS with Route 53 Resolver: <br>&emsp; + Connect to RDGW <br>&emsp; + Deploy Microsoft AD <br>&emsp; + Configure DNS | 12/09/2025 | 12/09/2025 | <https://000010.awsstudygroup.com/vi/> |
+| 6 | - Set up VPC Peering <br>&emsp; + Create peering connection between VPCs <br>&emsp; + Update Route tables and validate connectivity | 13/09/2025 | 13/09/2025 | <https://000019.awsstudygroup.com/> |
+| 7 | - AWS Transit Gateway practice: <br>&emsp; + Create Transit Gateway <br>&emsp; + Create Transit Gateway Attachments <br>&emsp; + Create Transit Gateway Route Tables <br>&emsp; + Add Transit Gateway routes to VPC Route Tables | 14/09/2025 | 14/09/2025 | <https://000020.awsstudygroup.com/> |
 
 ### Week 1 Achievements:
 
-- Understood what AWS is and mastered the basic service groups:hugo
-
-  - Compute
-  - Storage
-  - Networking
-  - Database
-  - ...
-
-- Successfully created and configured an AWS Free Tier account.
-
-- Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-- Installed and configured AWS CLI on the computer, including:
-
-  - Access Key
-  - Secret Key
-  - Default Region
-  - ...
-
-- Used AWS CLI to perform basic operations such as:
-
-  - Check account & configuration information
-  - Retrieve the list of regions
-  - View EC2 service
-  - Create and manage key pairs
-  - Check information about running services
-  - ...
-
-- Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-- ...
+- Prepared the working environment and understood core AWS concepts (account, region, AZ, service groups).
+- Account setup and security: created AWS account, enabled MFA, created Admin Group/User, completed account verification, configured Console and Support cases.
+- Networking fundamentals on AWS: VPC, Subnet, Route Table, Internet Gateway, NAT Gateway, Security Group, NACL, Elastic Load Balancing, Route 53; concepts of Peering, VPN, Transit Gateway.
+- Compute & connectivity hands‑on: launched an EC2 instance, connected via SSH, and configured a Site‑to‑Site VPN (lab level).
+- Hybrid DNS with Route 53 Resolver: connected to RDGW, deployed Microsoft AD, configured DNS/forwarders and Resolver rules for bidirectional lookups.
+- Set up VPC Peering between VPCs, updated Route Tables, and validated inter‑VPC connectivity.
+- Practiced AWS Transit Gateway: created TGW, configured Attachments and Route Tables, and added routes into VPC Route Tables for transit routing.
+- Completed Week 1 worklog and cleaned up unused resources.
