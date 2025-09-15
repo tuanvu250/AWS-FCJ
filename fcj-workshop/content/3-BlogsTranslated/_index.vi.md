@@ -12,9 +12,9 @@ pre: " <b> 3. </b> "
 
 Tại đây sẽ là phần liệt kê, giới thiệu các blogs mà các bạn đã dịch. Ví dụ:
 
-### [Blog 1 - Getting started with healthcare data lakes: Using microservices](3.1-Blog1/)
+### [Blog 1 - Các mô hình OpenAI Open‑Weight hiện có trên AWS](3.1-Blog1/)
 
-Blog này giới thiệu cách bắt đầu xây dựng data lake trong lĩnh vực y tế bằng cách áp dụng kiến trúc microservices. Bạn sẽ tìm hiểu vì sao data lake quan trọng trong việc lưu trữ và phân tích dữ liệu y tế đa dạng (hồ sơ bệnh án điện tử, dữ liệu xét nghiệm, thiết bị IoT y tế…), cách microservices giúp hệ thống linh hoạt, dễ mở rộng và dễ bảo trì hơn. Bài viết cũng hướng dẫn các bước khởi tạo môi trường, tổ chức pipeline xử lý dữ liệu, và đảm bảo tuân thủ các tiêu chuẩn bảo mật & quyền riêng tư như HIPAA.
+Bài viết tóm tắt thông báo trên AWS News Blog về việc hai mô hình OpenAI open‑weight (gpt‑oss‑120b và gpt‑oss‑20b) khả dụng trên Amazon Bedrock và Amazon SageMaker JumpStart. Nội dung đề cập lý do nên lưu trữ trong chính tài khoản AWS của bạn, cách bắt đầu với Bedrock (Model access, Chat/Test playground, endpoint tương thích OpenAI) và JumpStart, ví dụ dùng OpenAI SDK và Strands Agents, cùng các lưu ý về khu vực hỗ trợ, chain‑of‑thought và chi phí.
 
 ### [Blog 2 - ...](3.2-Blog2/)
 
