@@ -1,6 +1,6 @@
 ---
 title: "Week 1 Worklog"
-date: "2025-09-09"
+date: "2025-09-14"
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
@@ -16,8 +16,6 @@ pre: " <b> 1.1. </b> "
 - Master core AWS Networking fundamentals: VPC, Subnet, Route Table, IGW, NAT GW, Security Group, NACL, Route 53.
 - Practice compute and connectivity: launch EC2, SSH access, Site-to-Site VPN (lab).
 - Set up Hybrid DNS with Route 53 Resolver (Microsoft AD, forwarders, resolver rules) for bidirectional name resolution.
-- Establish inter‑VPC connectivity: VPC Peering and AWS Transit Gateway; validate end‑to‑end routing.
-- Keep a worklog, summarize learnings, and clean up resources after labs.
 
 ### Tasks to be carried out this week:
 
@@ -29,7 +27,6 @@ pre: " <b> 1.1. </b> "
 | 4 | - EC2 practice: <br>&emsp; + Launch EC2 instance <br>&emsp; + SSH access <br>&emsp; + Configure Site‑to‑Site VPN | 11/09/2025 | 11/09/2025 | <https://000003.awsstudygroup.com/> |
 | 5 | - Set up Hybrid DNS with Route 53 Resolver: <br>&emsp; + Connect to RDGW <br>&emsp; + Deploy Microsoft AD <br>&emsp; + Configure DNS | 12/09/2025 | 12/09/2025 | <https://000010.awsstudygroup.com/vi/> |
 | 6 | - Set up VPC Peering <br>&emsp; + Create peering connection between VPCs <br>&emsp; + Update Route tables and validate connectivity | 13/09/2025 | 13/09/2025 | <https://000019.awsstudygroup.com/> |
-| 7 | - AWS Transit Gateway practice: <br>&emsp; + Create Transit Gateway <br>&emsp; + Create Transit Gateway Attachments <br>&emsp; + Create Transit Gateway Route Tables <br>&emsp; + Add Transit Gateway routes to VPC Route Tables | 14/09/2025 | 14/09/2025 | <https://000020.awsstudygroup.com/> |
 
 ### Week 1 Achievements:
 
@@ -38,6 +35,4 @@ pre: " <b> 1.1. </b> "
 - Networking fundamentals on AWS: VPC, Subnet, Route Table, Internet Gateway, NAT Gateway, Security Group, NACL, Elastic Load Balancing, Route 53; concepts of Peering, VPN, Transit Gateway.
 - Compute & connectivity hands‑on: launched an EC2 instance, connected via SSH, and configured a Site‑to‑Site VPN (lab level).
 - Hybrid DNS with Route 53 Resolver: connected to RDGW, deployed Microsoft AD, configured DNS/forwarders and Resolver rules for bidirectional lookups.
-- Set up VPC Peering between VPCs, updated Route Tables, and validated inter‑VPC connectivity.
-- Practiced AWS Transit Gateway: created TGW, configured Attachments and Route Tables, and added routes into VPC Route Tables for transit routing.
 - Completed Week 1 worklog and cleaned up unused resources.

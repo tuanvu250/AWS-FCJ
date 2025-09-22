@@ -6,274 +6,125 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-# Gen AI & Data
+
+# Summary Report: “GenAI & Data”
+
+### Event Objectives
+
+- Update on **GenAI trends and strategies** on AWS  
+- Learn how to **build a unified data foundation** for AI/Analytics  
+- Introduction to the **AI-Driven Development Lifecycle (AI-DLC)** in software development  
+- Gain insights into **security for GenAI applications** and the role of **AI Agents in enterprises**
+
+### Speakers
+
+- **Jun Kai Loke** – AI/ML Specialist SA, AWS  
+- **Kien Nguyen** – Solutions Architect, AWS  
+- **Tamelly Lim** – Storage Specialist SA, AWS  
+- **Binh Tran** – Senior Solutions Architect, AWS  
+- **Taiki Dang** – Solutions Architect, AWS  
+- **Michael Armentano** – Principal WW GTM Specialist, AWS 
+
+### Key Highlights
+
+#### 1. Building a Unified Data Foundation on AWS for AI & Analytics
+- Strategies for constructing a unified, scalable data foundation for AI/Analytics.  
+- End-to-end data pipeline: ingestion → storage → processing → access → governance.  
+- Overcoming 3 silos (Data/People/Business); enable self-service with standardized governance.  
+- Core services: **S3, Glue, Redshift, Lake Formation, OpenSearch, Kinesis/MSK**.
+
+#### 2. Building the Future: GenAI Adoption Strategy on AWS
+- Vision and trends of GenAI; roadmap for enterprise adoption.  
+- **Amazon Bedrock**: model choice, customization/RAG, guardrails, cost/latency optimization.  
+- **AgentCore**: framework-independent runtime, tool integration gateway, identity & observability.  
+- **Amazon Nova** and ecosystem frameworks (**CrewAI, LangGraph, LlamaIndex, Strands**).
+
+#### 3. Securing Generative AI Applications with AWS
+- Risks per **OWASP LLM (LLM01/02)**; ensuring safe output handling.  
+- Security at multiple layers: **infrastructure, models, applications**; IAM, encryption, zero-trust, continuous monitoring.  
+- **5 Security Pillars**: Compliance & Governance, Legal & Privacy, Controls, Risk Management, Resilience.  
+- **Generative AI Security Scoping Matrix (Scope 1 → 5)**: from consumer apps to self-trained models.  
+- **Bedrock Guardrails**: filter sensitive content with configurable thresholds.  
+- **Human-in-the-loop**: human approval/intervention when needed.  
+- **Observability (OpenTelemetry)**: transparent monitoring, logging, and tracing of AI behaviors.
+
+#### 4. Beyond Automation: AI Agents as Productivity Multipliers
+- Agentic AI: from assistants → multi-agent systems; less human oversight, more autonomy.  
+- Applications: customer support, BI with **Amazon Q (QuickSight)**, workflow automation.  
+- **Amazon Q in QuickSight**: Build Dashboards/Reports, Data Q&A, Executive Summaries.  
+- Expected value: **exponential productivity gains**; requires strong data foundation & governance.
+
+#### 5. Reliability and Veracity of GenAI
+- Challenge of **hallucination** → mitigated via Prompt Engineering, RAG, Fine-tuning, Parameter Tuning.  
+- **RAG in action**: user input → embeddings → contextual retrieval → LLM → grounded response.  
+
+#### 6. AI-Driven Development Lifecycle (AI-DLC)
+- An **AI-centric** lifecycle: Inception → Construction → Operation.  
+- Evolution: **AI-Assisted → AI-Driven → AI-Managed**; AI orchestrates, humans approve.  
+- Deployment infrastructure: **IaC, automated testing, observability, risk management**.
+
+#### 7. Amazon SageMaker (Unified Studio – Next Gen)
+- **One unified environment** for **data, analytics, and AI**: SQL analytics, data processing, model development/training, **GenAI app development**, BI, streaming, search analytics.  
+- **Lakehouse + Governance**: catalog/lineage, policy-based access, auditing; unified **Data & AI governance**.  
+- **Zero-ETL integration**: core **S3 ↔ Redshift**, connections to **Aurora, DynamoDB, RDS, OpenSearch, Kinesis/MSK, Salesforce, SAP, ServiceNow**.  
+- **Full MLOps**: pipelines/experiments, model registry, deployment endpoints, **Feature Store**, monitoring.  
+- **Integrated with Bedrock & JumpStart**: access to foundation models (via Bedrock), reference solutions, and accelerated deployment on SageMaker.
+
+- **SDLC automation**: From planning to maintenance
+- **Code transformation**: Java upgrade, .NET modernization
+- **AWS Transform agents**: VMware, Mainframe, .NET migration
+
+### Key Takeaways
+
+#### Design Mindset
+- **Business-first approach**: Always start from business needs, not technology.  
+- **Ubiquitous language**: The importance of shared vocabulary between business and tech, especially in teamwork and communication with mentors.  
+- **Bounded contexts**: Understanding how to partition domains to avoid complexity when scaling.
+
+#### Architecture & Technology
+- **Unified Data Foundation**: ingestion → storage → processing → access → governance.  
+- **GenAI on AWS**: Bedrock (model choice, guardrails, RAG), AgentCore (runtime, gateway, identity, observability), Nova LLMs.  
+- **AI Agents**: from assistants → multi-agent systems; real-world use cases like customer support and BI with Amazon Q.  
+- **AI-DLC**: AI as the core collaborator in SDLC (Inception → Construction → Operation).  
+- **Security-first mindset**: Guardrails, human-in-the-loop, governance & monitoring (OpenTelemetry).
+
+#### Strategy & Application
+- **Phased approach**: Avoid rushing; need a clear roadmap for modernization & AI adoption.  
+- **Zero-ETL & Unified Studio (SageMaker)**: Simplify data integration, centralize AI lifecycle management.  
+- **ROI measurement**: Not just cost savings, but agility and productivity.
+
+### Applying to Work
+
+- **In my project**:  
+  - Experiment with **AI Agents** for workflows like registration/login or customer support.  
+  - Apply **validation/guardrails** to ensure safe integration of GenAI features.  
+
+- **In team projects (Sprint 0, serverless vs containerization)**:  
+  - Apply **AI-DLC** principles to split tasks logically: AI supports research/code generation, team reviews & approves.  
+  - Understand when to use **Lambda (serverless)** vs **ECS/Fargate (containers)**.  
+
+- **In my learning path**:  
+  - Recognize the need for a **business-first approach** when writing documents and gathering requirements.  
+  - Acknowledge that a strong **data foundation** is critical for any successful GenAI application.
+
+### Event Experience
+
+- Learned directly from AWS experts on **Data, GenAI adoption, Security, AI Agents, and AI-DLC**.  
+- Slides and case studies gave me a clear picture of how **AgentCore** works in real-world scenarios.  
+- Understood how **AWS envisions the future of software development**: AI not just as an assistant but as a core lifecycle component.  
+- Realized that successful GenAI adoption requires **solid data foundation + strong security + structured strategy**.
 
 ---
 
-## 1. Evolution of Agentic AI
+### Lesson learned
 
-- **Generative AI Assistants**: Follow rules, automate repetitive tasks.
-- **Generative AI Agents**: Achieve single goals, broader tasks, automate workflows.
-- **Agentic AI Systems**: Fully autonomous, multi-agent collaboration, mimic human logic.
-- Trend: Moving from *more human oversight* → *less human oversight*.
+- **AI Agents** and **AgentCore** will soon become critical in enterprise applications → I should learn early to stay ahead.  
+- **Data platform & governance** are essential → not just coding, but also managing data properly.  
+- **AI-DLC** highlights AI’s role in future SDLC → I can experiment with small projects now.  
+- **Security** is not an afterthought; it must be built into GenAI systems from the start.
 
----
+#### Some event photos
 
-## 2. Value Creation with Agentic AI
+_Add your event photos here_
 
-- **Workplace productivity**
-- **Business workflows**
-- **Innovation and research**
-
----
-
-## 3. Market Trends
-
-- By **2028**, 33% of enterprise software apps will use Agentic AI (vs <1% in 2024).
-- By **2030**, 15% of daily work decisions will be made autonomously by Agentic AI.
-- **Challenge**: 40% of projects may fail by 2027 due to unclear value, high cost, or poor risk control.
-
----
-
-## 4. Vietnam Data & AI Success Stories
-
-- **Katalon**: Agentic QA (automation testing with intelligent agents).
-- **Apero**: AI adoption with NVIDIA GPUs (50M+ downloads).
-- **Techcom Securities**: Multi-agent analysis for market & investment.
-
----
-
-## 5. AWS AI Platforms
-
-### Amazon Bedrock
-
-- Build and scale GenAI apps quickly.
-- Features: Model choice, cost optimization, safety, orchestration.
-
-### Amazon Bedrock AgentCore
-
-- **Purpose**: Deploy and manage production-ready agents securely at scale.
-- **Capabilities**:
-  - Agent runtime & identity
-  - Tool discovery & integration
-  - Short-term & long-term memory
-  - Debugging, tracing, monitoring
-  - Code interpretation & browser automation
-- **Runtime**:
-  - Framework & model independent (supports Strands, LangChain, CrewAI…)
-  - Use-case independent (large payloads: text, audio, video)
-  - Enterprise-grade isolation (session isolation, authentication, observability)
-- **Gateway**:
-  - Simplifies tool integration (REST APIs, Lambda)
-  - Secure, unified tool access
-  - Intelligent discovery via MCP + semantic search
-- **Identity**:
-  - Secure access with enterprise identity providers
-  - Reduced consent fatigue (streamlined flows)
-  - Inbound/outbound authentication (OAuth2, IAM, Cognito)
-- **Observability**:
-  - Full transparency of agent behavior
-  - Enterprise security & governance (IAM, PII redaction)
-  - Integration with 3rd-party observability tools (OTEL)
-- **Customer Support Agent Example**:
-  - Workflow: Customer → Bedrock LLM → Support Agent → AgentCore Gateway → Lambda tools (warranty check, profile retrieval).
-
-### Amazon Nova (LLM family)
-
-- Models: Pro, Lite, Micro, Act, Sonic, Premier.
-- Covers text, speech, video QA.
-
-### Frameworks for Agents
-
-- CrewAI, LangGraph, LlamaIndex, Strands Agents SDK.
-- **Strands Agents v1.0**: A2A support, conversation persistence, multi-agent workflows.
-
----
-
-## 6. AI Agent Concepts
-
-- **Definition**: Autonomous software systems leveraging AI to reason, plan, and complete tasks on behalf of humans/systems.
-- **Components**: Goals, tools, context, observation, actions.
-- **Challenge**: Heavy lifting in production (security, past interactions, access control, auditing).
-- **Types of Agents**:
-  - Specialized: Amazon Q agents.
-  - Fully-managed: Bedrock agents with orchestration.
-  - DIY: Expert developers using open frameworks.
-- **Memory**:
-  - Short-term: chat messages, session state.
-  - Long-term: semantic, preferences, summaries.
-  - Automatic extraction module for efficiency.
-
----
-
-## 7. Data & Analytics Foundation
-
-### Data Challenges
-
-- Silos: **Data, People, Business**.
-- Evolving requirements: From structured → unstructured, vector DBs, self-service governance.
-
-### Metadata & AI
-
-- Data prep → Metadata → Analytics & AI (GenAI/RAG, recommendations, anomaly detection).
-
-### AWS Database Services
-
-- **Relational**: RDS, Aurora.
-- **Specialized**: DynamoDB, DocumentDB, ElastiCache, Neptune, Timestream, QLDB, Keyspaces, MemoryDB.
-
-### Vector Search
-
-- Available in DocumentDB, DynamoDB, MemoryDB, Neptune, OpenSearch, Aurora, RDS.
-
-### AWS Analytics Services
-
-- Athena, EMR, Kinesis, Redshift, Glue, QuickSight, OpenSearch.
-
----
-
-## 8. Amazon SageMaker (Next Gen)
-
-- **Unified Studio**: One environment for data, analytics, and AI.
-- **Features**: SQL analytics, data processing, model & GenAI app development, BI, streaming, search analytics.
-- **Governance**: Data & AI policies.
-- **Lakehouse** foundation.
-
----
-
-## 9. Data Integration: Zero-ETL
-
-- **Amazon S3 + Redshift** as core.
-- Integrations with Aurora, DynamoDB, RDS, MSK, Kinesis, OpenSearch, Salesforce, SAP, ServiceNow.
-
----
-
-## 10. AI-Driven Development Lifecycle (AI-DLC)
-
-### Challenges of AI-Assisted Development
-
-- Still manual heavy lifting.
-- AI applied narrowly.
-- **Limitations**:
-  - Not delivering agility promise.
-  - Manual inefficiencies.
-  - Technical debts.
-
-### From AI-Assisted → AI-Driven → AI-Managed
-
-- **AI-Assisted**: Support coding, but humans still manage planning & validation.
-- **AI-Driven**: AI orchestrates planning, task decomposition, architectural suggestions.
-- **AI-Managed**: Fully automated, humans only validate and approve.
-
-### Lifecycle Stages
-
-1. **Inception**
-   - Build context on existing code.
-   - Elaborate intent with user stories.
-   - Plan with units of work.
-2. **Construction**
-   - Domain model (component model).
-   - Generate code & test.
-   - Add architectural components.
-   - Deploy with IaC & tests.
-3. **Operation**
-   - Deploy in production with IaC.
-   - Manage incidents.
-
-### AI vs Users Roles
-
-- **AI**: Research & plan, build & test, deploy.
-- **Users**: Decisions, reviews, approvals.
-
-### Unicorn Gym
-
-- **Mechanics**: Align – Experience – Adapt – Scale.
-- **Pre-Requisites**:
-  - Preparing code repository.
-  - List of problem statements (greenfield/brownfield, new features, technical debt).
-  - Leadership attendance for kickoff & demo.
-
----
-
-## 11. Security in Generative AI
-
-### Key Pillars
-
-- **Compliance & Governance**: Usage guidelines, monitoring, reporting.
-- **Legal & Privacy**: Control of data, encryption, privacy standards.
-- **Controls**: Human-in-the-loop, explainability, testing strategy, IAM.
-- **Risk Management**: Threat modeling, third-party risk assessments.
-- **Resilience**: Data management, high availability, disaster recovery.
-
-### Security Scoping Matrix
-
-- **Scope 1**: Consumer apps (ChatGPT, MidJourney).
-- **Scope 2**: Enterprise SaaS apps (Salesforce Einstein GPT, Amazon Q).
-- **Scope 3**: Pre-trained models with versioning.
-- **Scope 4**: Fine-tuned models.
-- **Scope 5**: Self-trained models (Amazon SageMaker).
-
-### Application Risks
-
-- **LLM01**: Prompt injection.
-- **LLM02**: Insecure output handling.
-- Risks in plugins/extensions, downstream services, data pipelines.
-
-### Mitigation Strategies
-
-- Secure prompts, guardrails, access control.
-- Use &lt;thinking&gt; and &lt;answer&gt; tags.
-- Contextual multi-perspective prompts.
-- Data sanitization & supply chain verification.
-- Human-in-the-loop for validation.
-
-### Veracity (Hallucination)
-
-- False outputs due to incomplete/incorrect context.
-- **Mitigation**: Prompt engineering, RAG, fine-tuning, inference parameter tuning.
-
-### RAG (Retrieval-Augmented Generation)
-
-- Process: User input → Embedding → Prompt augmentation → LLM → Response.
-- Supports grounded, context-rich answers.
-
-### Bedrock Guardrails
-
-- Content filtering by category (toxic, violence, sexual, etc.).
-- Configurable thresholds for enterprise policies.
-
----
-
-## 12. Amazon Q & Agentic AI for BI
-
-### What are AI Agents?
-
-- Autonomous systems that reason, plan, execute tasks.
-
-### Choices of Agents
-
-- **Specialized**: Amazon Q agents for productivity.
-- **Fully-Managed**: Bedrock agents with orchestration.
-- **DIY**: Open-source frameworks.
-
-### Amazon Q in QuickSight
-
-- **Dashboards & Reports**: Build visuals, refine calculations.
-- **Data Q&A**: Ask natural language questions.
-- **Summaries & Stories**: Generate insights, documents, presentations.
-
-### Agentic AI Scenarios by Amazon Q
-
-- Step-by-step analysis for complex BI tasks.
-- Multi-modal AI agents reduce manual work.
-- Extensible for reusability.
-
----
-
-## 13. Final Takeaways
-
-- AWS AI vision spans **data → model → agent → governance**.
-- **AgentCore** enables production-grade agent orchestration.
-- **AI-DLC** reshapes SDLC with AI as core collaborator.
-- **Security-first mindset** is essential for generative AI adoption.
-- **Amazon Q** empowers business users with natural language BI.
+> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.

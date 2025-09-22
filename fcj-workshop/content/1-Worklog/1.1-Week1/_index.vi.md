@@ -1,6 +1,6 @@
 ---
 title: "Worklog Tuần 1"
-date: "2025-09-09"
+date: "2025-09-14"
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
@@ -13,7 +13,6 @@ pre: " <b> 1.1. </b> "
 - Nắm vững nền tảng Networking trên AWS: VPC, Subnet, Route Table, IGW, NAT GW, Security Group, NACL, Route 53.
 - Thực hành Compute & kết nối: tạo EC2, kết nối SSH, lab Site‑to‑Site VPN.
 - Thiết lập Hybrid DNS với Route 53 Resolver (AD, forwarders, resolver rules) cho tra cứu hai chiều.
-- Thiết lập kết nối liên VPC: VPC Peering và AWS Transit Gateway; kiểm thử routing end‑to‑end.
 
 ### Các công việc cần triển khai trong tuần này:
 
@@ -25,7 +24,6 @@ pre: " <b> 1.1. </b> "
 | 4 | - Thực hành EC2: <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Cấu hình Site to Site VPN | 11/09/2025 | 11/09/2025 | <https://000003.awsstudygroup.com/> |
 | 5 | - Thiết lập Hybrid DNS với Route 53 Resolver: <br>&emsp; + Kết nối đến RDGW <br>&emsp; + Triển khai Microsoft AD <br>&emsp; + Thiết lập DNS | 12/09/2025 | 12/09/2025 | <https://000010.awsstudygroup.com/> |
 | 6 | - Thiết lập VPC Peering <br>&emsp; + Tạo kết nối Peering giữa VPCs <br>&emsp; + Cập nhật Route tables và kiểm thử kết nối | 13/09/2025 | 13/09/2025 | <https://000019.awsstudygroup.com/> |
-| 7 | - Thực hành AWS Transit Gateway: <br>&emsp; + Tạo Transit Gateway <br>&emsp; + Tạo Transit Gateway Attachments <br>&emsp; + Tạo Transit Gateway Route Tables <br>&emsp; + Thêm Transit Gateway Routes vào VPC Route Tables | 14/09/2025 | 14/09/2025 | <https://000020.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 1:
 
@@ -34,6 +32,4 @@ pre: " <b> 1.1. </b> "
 - Kiến thức Networking nền tảng trên AWS: VPC, Subnet, Route Table, Internet Gateway, NAT Gateway, Security Group, NACL, Elastic Load Balancing, Route 53; khái niệm về Peering, VPN, Transit Gateway.
 - Thực hành Compute & kết nối: triển khai EC2 instance, kết nối SSH, cấu hình Site‑to‑Site VPN ở mức lab.
 - Thiết lập Hybrid DNS với Route 53 Resolver: kết nối RDGW, triển khai Microsoft AD, cấu hình DNS/forwarders và Resolver rules cho tra cứu hai chiều.
-- Thiết lập VPC Peering giữa các VPC, cập nhật Route Tables và kiểm thử liên thông mạng thành công.
-- Thực hành AWS Transit Gateway: tạo TGW, cấu hình Attachments và Route Tables, cập nhật routes vào VPC Route Tables để trung chuyển lưu lượng.
 - Hoàn thiện worklog tuần 1 và rà soát/dọn dẹp các tài nguyên không còn sử dụng.
